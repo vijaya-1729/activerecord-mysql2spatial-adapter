@@ -40,7 +40,7 @@ module ActiveRecord
         ConnectionAdapters::Mysql2Adapter::Column : ConnectionAdapters::Mysql2Column
 
       class SpatialColumn < column_base_class_
-        FACTORY_SETTINGS_CACHE = {}
+        FACTORY_SETTINGS_CACHE = {}.freeze
         def initialize(factory_settings_, table_name_, name_, default_, sql_type_ = nil, null_ = true)
           @factory_settings = factory_settings_
           @table_name = table_name_
